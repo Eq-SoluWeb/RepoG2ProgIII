@@ -1,6 +1,0 @@
-Presentación de los integrantes del equipo
-
-Jorge Ríos
-Desarrollador full stack con énfasis en php,y bases de datos Oracle y mysql ,experiencia en arquitectura y diseño de sistemas de información completos, para el sector industrial y de servicios, experiencia en liderar equipos de desarrollo como diseñador lider de soluciones y modelamiento d los datos.
-Coonocimiento de frameworks de tramabo con el modelo MVC como laravel con livewire, flask para python y django para python, conocimiento de frameworks css como bootstrap-4 y tailwind, conocimientos de html-5 y javascript
-
