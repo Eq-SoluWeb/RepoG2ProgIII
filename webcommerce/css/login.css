@@ -60,6 +60,18 @@ section .container .user .imgBx img
   object-fit: cover;
 }
 
+section .container .user .imgVend img
+{
+  position: left;
+  top: 5;
+  left: 5;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  padding-top:50;
+  padding-left:50;
+}
+
 section .container .user .formBx
 {
   position: relative;
@@ -69,8 +81,9 @@ section .container .user .formBx
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 10px;
   transition: 0.5s;
+  margin-bottom:auto;
 }
 
 section .container .user .formBx h2 {
