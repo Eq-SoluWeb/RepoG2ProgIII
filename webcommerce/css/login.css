@@ -99,7 +99,7 @@ section .container .user .formBx input {
 }
 
 section .container .user .formBx input[type='submit'] {
-  max-width: 100px;
+  max-width: 110px;
   background: #677eff;
   color: #fff;
   cursor: pointer;
@@ -116,7 +116,7 @@ section .container .user.signupBx .formBx input[type='submit']{
 section .container .user .formBx .signup {
   position: relative;
   margin-top: 20px;
-  font-size: 12px;
+  text-align:center;
   letter-spacing: 1px;
   color: #555;
   text-transform: uppercase;
@@ -181,4 +181,23 @@ section .container.active .signinBx .imgBx{
   section .container.active .signinBx .formBx{
   top:-100%;
   }
+}
+
+section .container .user .formBx .move{
+  max-width: 110px;
+  background: #677eff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  border:none
+}
+
+.containerButtons{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
 }
