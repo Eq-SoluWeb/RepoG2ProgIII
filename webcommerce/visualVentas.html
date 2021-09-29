@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/ventaRegis.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,100&display=swap"
+    rel="stylesheet">
+  <title>Gestion de Ventas</title>
+  <script src="../crudSencilloReact-master/src/App.js"></script>
+</head>
+
+<body>
+  <!-- DATOS RELACIONADOS A UNA VENTA:
+  identificador único de venta (Inmutable),
+  el valor total de la venta,
+  identificador
+  cantidad
+  precio unitario de cada producto
+  fecha de venta
+  el documento de identificación
+  Nombre del cliente
+  encargado de gestionar dicha venta (vendedor).
+-->
+
+  <head id="conteiner">
+    <div id="titulo">
+      <h1>Titulo opcional</h1>
+    </div>
+  </head>
+  <section>
+    <div class="table-title">
+      <h3>Registrar Venta</h3>
+    </div>
+    <table class="table-fill">
+      <thead>
+        <tr>
+          <th class="text-left">Identificador Unico</th>
+          <th class="text-left">Valor Total</th>
+          <th class="text-left">Cantidad</th>
+          <th class="text-left">Precio Unitario</th>
+          <th class="text-left">Fecha de Venta</th>
+          <th class="text-left">Documento Identificacion</th>
+          <th class="text-left">Nombre Cliente</th>
+          <th class="text-left">Encargado</th>
+        </tr>
+      </thead>
+      <tbody class="table-hover">
+        <tr>
+          <td class="text-left">0001</td>
+          <td class="text-left">$ 500000</td>
+          <td class="text-left">1000</td>
+          <td class="text-left">500</td>
+          <td class="text-left"></td>
+          <td class="text-left"></td>
+          <td class="text-left"></td>
+          <td class="text-left"></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <br>
+  </section>
+</body>
+
+</html>
