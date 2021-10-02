@@ -155,27 +155,39 @@ td.text-right {
   text-align: right;
 }
 .icono1{
-  width:80px;
-  margin: 0px;
+  width:40px;
+  /* margin: 10px; */
   padding: 0px;
 }
 
 .icono2{
-  width:80px;
+  width:40px;
+  /* margin:10px; */
   padding: 0px;
 }
 
 .contIcono{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 
 }
 
+.contBuscar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contBuscar h3{
+  margin: 20px;
+}
+
 .contIcono .botIcon button{
   background-color: #d9d9dd;
   border:none;
+  margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
 }

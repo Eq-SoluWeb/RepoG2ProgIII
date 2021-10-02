@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/visualVenta.css">
+  <link rel="stylesheet" href="css/verVentasProductos.css">
   <link rel="stylesheet" href="css/menu.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,6 @@
 
 <body>
   <nav>
-    <a href="visualVentas.html">Ver Ventas</a>
   <a href="registrarVenta.html"> Registrar Venta </a>
   <a href="verVentas.html">Ver Ventas</a>
   <a href="registrarProducto.html"> Registrar Producto </a>
@@ -41,6 +40,10 @@
     <div class="table-title">
       <h1>Ventas hasta el momento</h1>
     </div>
+    <div class="contBuscar">
+      <h3>Buscar:</h3>
+      <input type="text">
+    </div>
     <table class="table-fill">
       <thead>
         <tr>
@@ -52,6 +55,7 @@
           <th class="text-left">Documento Identificacion</th>
           <th class="text-left">Nombre Cliente</th>
           <th class="text-left">Encargado</th>
+          <th class="text-left">Acciones</th>
         </tr>
       </thead>
       <tbody class="table-hover">
@@ -64,6 +68,20 @@
           <td class="text-left">14695176</td>
           <td class="text-left">Horacio Daza</td>
           <td class="text-left">David Rios</td>
+          <td class="text-center">
+            <div class="contIcono">
+              <div class="botIcon">
+                <button>
+                  <img  class="icono1" src="icon/delete.png" alt="Icono de Borrar">
+                </button>
+              </div>
+              <div class="botIcon">
+                <button>
+                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
+                </button>
+              </div>
+            </div>
+          </td>
         </tr>
         <tr>
           <td class="text-left">0002</td>
@@ -74,6 +92,20 @@
           <td class="text-left">94239435</td>
           <td class="text-left">Daniela Mora</td>
           <td class="text-left">Juan Sanchez</td>
+          <td class="text-center">
+            <div class="contIcono">
+              <div class="botIcon">
+                <button>
+                  <img  class="icono1" src="icon/delete.png" alt="Icono de Borrar">
+                </button>
+              </div>
+              <div class="botIcon">
+                <button>
+                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
+                </button>
+              </div>
+            </div>
+          </td>
         </tr>
                 <tr>
           <td class="text-center">0001</td>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/ventaRegis.css">
+  <link rel="stylesheet" href="css/verVentasProductos.css">
   <link rel="stylesheet" href="css/menu.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,11 @@
 -->
   <section>
     <div class="table-title">
-      <h3>Estas son los Productos registrados hasta el momento</h3>
+      <h1>Productos registrados hasta el momento</h1>
+    </div>
+    <div class="contBuscar">
+      <h3>Buscar:</h3>
+      <input type="text">
     </div>
     <table class="table-fill">
       <thead>
@@ -57,16 +61,19 @@
           <td class="text-left">$ 30000</td>
           <td class="text-left">Disponible</td>
           <td class="text-left">
-            <div class="action">
-            <label for="action"></label>
-            <select placeholder="Producto" name="action" id="action_input" required>
-              <option disabled hidden selected>Elija una acción</option>
-              <option>Crear</option>
-              <option>Consultar</option>
-              <option>Actualizar</option>
-              <option>Borrar</option>
-            </select>
-          </div></td>
+          <div class="contIcono">
+              <div class="botIcon">
+                <button>
+                  <img  class="icono1" src="icon/delete.png" alt="Icono de Borrar">
+                </button>
+              </div>
+              <div class="botIcon">
+                <button>
+                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
+                </button>
+              </div>
+            </div>
+        </td>
         </tr>
         <tr>
           <td class="text-left">0002</td>
@@ -74,7 +81,7 @@
           <td class="text-left">$ 40000</td>
           <td class="text-left">No disponible</td>
           <td class="text-left">
-            <div class="action">
+            <!-- <div class="action">
               <label for="action"></label>
               <select placeholder="Producto" name="action" id="action_input" required>
                 <option disabled hidden selected>Elija una acción</option>
@@ -83,6 +90,18 @@
                 <option>Actualizar</option>
                 <option>Borrar</option>
               </select>
+            </div> -->
+            <div class="contIcono">
+              <div class="botIcon">
+                <button>
+                  <img  class="icono1" src="icon/delete.png" alt="Icono de Borrar">
+                </button>
+              </div>
+              <div class="botIcon">
+                <button>
+                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
+                </button>
+              </div>
             </div>
           </td>
         </tr>
