@@ -1,7 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+@import url(https://fonts.googleapis.com/css?family=Cookie|Raleway:300,700,400);
 body {
   background-color: #aebfd3;
-  font-family: 'Roboto', helvetica, arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   font-weight: 400;
   text-rendering: optimizeLegibility;
@@ -9,12 +9,13 @@ body {
 }
 
 h1 {
-  font-weight: 300;
-  background-color: rgb(208, 211, 211);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   text-align: center;
   font-size: 30px;
+  margin-bottom: 40px;
 }
 
 div.table-title {
@@ -44,7 +45,7 @@ div.table-title {
   border-collapse: collapse;
   height: 320px;
   margin: auto;
-  max-width: 600px;
+  max-width: 500px;
   padding: 5px;
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -53,17 +54,19 @@ div.table-title {
 
 th {
   color: #d5dde5;
-  min-width: 100px;
+  min-width: 70px;
   text-align: center;
   background: #1b1e24;
   border-bottom: 4px solid #9ea7af;
   border-right: 1px solid #343a45;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 100;
   padding: 24px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   vertical-align: middle;
 }
+
+
 
 th:first-child {
   border-top-left-radius: 3px;
@@ -84,7 +87,7 @@ tr {
 }
 
 tr:hover td {
-  background: #4e5066;
+  background: #7f7f83;
   color: #ffffff;
   border-top: 1px solid #22262e;
 }
@@ -102,7 +105,7 @@ tr:nth-child(odd) td {
 }
 
 tr:nth-child(odd):hover td {
-  background: #4e5066;
+  background:#7f7f83;
 }
 
 tr:last-child td:first-child {
@@ -151,4 +154,33 @@ td.text-center {
 td.text-right {
   text-align: right;
 }
+.icono1{
+  width:80px;
+  margin: 0px;
+  padding: 0px;
+}
 
+.icono2{
+  width:80px;
+  padding: 0px;
+}
+
+.contIcono{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contIcono .botIcon button{
+  background-color: #d9d9dd;
+  border:none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contIcono .botIcon button:active {
+    background-color: #4e5066;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #4e5066;
+}
