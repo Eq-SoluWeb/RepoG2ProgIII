@@ -28,9 +28,6 @@ button, input, select, textarea {
   margin: 0;
 }
 
-
-
-
 input {
   line-height: normal;
 }
@@ -41,7 +38,7 @@ textarea {
 
 #container {
   border: solid 3px #474544;
-  max-width: 760px;
+  max-width: 740px;
   margin: 20px auto;
   position: relative;
 }
@@ -59,8 +56,6 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
-
-
 
 .icon_wrapper {
   margin: 50px auto 0;
@@ -228,5 +223,21 @@ textarea {
 
   input[type='text'], [type='email'],[type='number'] ,[type='date'],select, textarea {
     font-size: 0.875em;
+  }
+
+  table td:first-child {
+     width: 200px;
+  }
+
+  table td:nth-child(2) {
+     width: 50px;
+  }
+
+  table td:nth-child(3) {
+     width: 200px;
+  }
+
+  table td:last-child {
+    width: 150px;
   }
 }

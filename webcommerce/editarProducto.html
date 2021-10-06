@@ -7,8 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sales</title>
-
+	<title>Inventory</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/sweetalert2.css">
 	<link rel="stylesheet" href="css/material.min.css">
@@ -22,14 +21,10 @@
 	<script src="js/sweetalert2.min.js" ></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
 	<script src="js/main.js" ></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-
-sweetalert2/7.33.1/sweetalert2.all.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limo
-nte-sweetalert2/7.33.1/sweetalert2.css">
- <link rel="preconnect" href="https://fonts.googleapis.com">
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,100&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <script src="js/registroVentas.js"></script>
@@ -38,7 +33,6 @@ nte-sweetalert2/7.33.1/sweetalert2.css">
     integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.css">
-
 </head>
 <body>
 	<!-- Notifications area -->
@@ -213,70 +207,54 @@ nte-sweetalert2/7.33.1/sweetalert2.css">
 				</nav>
 			</div>
 		</div>
-		<section class="content">
+	<section class="content">
     <div>
       <div id="container">
-        <h1>&bull; Registrar Venta &bull;</h1>
+        <h1>&bull; Actualizar Producto &bull;</h1>
         <div class="icon_wrapper">
           <!-- ESPACIO PARA IMAGEN -->
         </div>
-        <form action="#" method="post" id="contact_form" onsubmit="return enviarVenta()">
+        <form action="#" method="post" id="contact_form" onsubmit="return editarProducto()">
           <div class="name">
             <label for="name"></label>
-            <input type="text" placeholder="Nombre Vendedor" name="name" id="name_input" required>
+            <input type="text" placeholder="Identificador Unico" name="name" id="name_input" disabled>
           </div>
-          <div class="email">
-            <label for="email"></label>
-            <input type="email" placeholder="Email Vendedor" name="email" id="email_input" required>
+          <div class="subject">
+            <label for="subject"></label>
+            <select placeholder="Descripción" name="name" id="name_input" required>
+              <option disabled hidden selected>Descripción</option>
+              <option>Botas Amarillas</option>
+              <option>Botas Verdes</option>
+              <option>Botas Rojas</option>
+              <option>Camiseta Negra</option>
+              <option>Camiseta Azul</option>
+              <option>Camiseta Blanca</option>
+            </select>
           </div>
           <div class="name">
             <label for="name"></label>
-            <input type="text" placeholder="Nombre Cliente" name="name" id="name_input" required>
-          </div>
-          <div class="email">
-            <label for="email"></label>
-            <input type="number" placeholder="Identificacion Cliente" name="email" id="email_input" required>
+            <input type="number" placeholder="Valor Unitario" name="name" id="name_input" required>
           </div>
           <div class="subject">
-            <label for="name"></label>
-            <input type="number" placeholder="Identificador Venta" name="name" id="name_input" disabled>
+            <label for="subject"></label>
+            <select placeholder="Estado" name="name" id="name_input" required>
+              <option disabled hidden selected>Estado</option>
+              <option>Disponible</option>
+              <option>No disponible</option>
+            </select>
           </div>
-          <div class="subject">
-            <label for="name"></label>
-            <input type="date" placeholder="Fecha" name="name" id="name_input" required>
-          </div><br><br>
-          <div class="container">
-            <table class="table">
-              <thead class="bg-dark text-light">
-                <tr>
-                  <th>Producto</th>
-                  <th>Cantidad</th>
-                  <th>Precio</th>
-                  <th>Valor Total</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">
-                    <input type="text" placeholder="-------" name="name" id="name_input" required>
-                  </td>
-                  <td><input type="number" placeholder="# ---" name="name" id="name_input" required></td>
-                  <td><input type="number" placeholder="$ ---" name="name" id="name_input" required></td>
-                  <td><input type="number" placeholder="$ ---" name="name" id="name_input" disabled></td>
-                </tr>
-              </tbody>
-            </table>
+          <br>
           <input type="submit" value="Enviar" id="form_button" />
         </form><!-- // End form -->
       </div><!-- // End #containe  -->
     </div>
   </section>
   <script>
-    function enviarVenta() {
+    function editarProducto() {
       event.preventDefault();
 
       Swal.fire({
-        title: 'La venta ha sido registrada correctamente',
+        title: 'El producto ha sido actualizado correctamente',
         type: 'success',
         showCancelButton: false,
 
@@ -288,6 +266,5 @@ nte-sweetalert2/7.33.1/sweetalert2.css">
       })
     }
   </script>
-	</section>
 </body>
 </html>

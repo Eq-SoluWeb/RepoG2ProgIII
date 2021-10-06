@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/material.min.css">
 	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" href="css/registarVenta.css">
-	<link rel="stylesheet" href="css/verVentasProductos.css">
+	<link rel="stylesheet" href="css/verVentasProductos2.css">
 	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -26,22 +26,23 @@
 sweetalert2/7.33.1/sweetalert2.all.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limo
 nte-sweetalert2/7.33.1/sweetalert2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,100&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <script src="js/registroVentas.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.css">
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,100&display=swap"
+    rel="stylesheet">
+  <title>Gestion de productos</title>
 </head>
-<script>
-function enviar() {
-event.preventDefault();
-Swal.fire({
-title: 'El Producto ha sido registrada correctamente',
-type: 'success',
-showCancelButton: false,
-}).then((result) => {
-if (result.value) {
-document.formulario_registro.submit();
-}
-return false;
-})
-}
-</script>
+
 <body>
 	<!-- Notifications area -->
 	<section class="full-width container-notifications">
@@ -227,37 +228,31 @@ return false;
 		</section>
 		<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
 			<div class="mdl-tabs__tab-bar">
-				<a href="#tabNewProduct" class="mdl-tabs__tab is-active">NEW</a>
-				<a href="#tabListProducts" class="mdl-tabs__tab">LIST</a>
+				<a href="#tabNewProduct" class="mdl-tabs__tab is-active">NUEVO</a>
+				<a href="#tabListProducts" class="mdl-tabs__tab">LISTA</a>
 			</div>
 			<div class="mdl-tabs__panel is-active" id="tabNewProduct">
 				<section class="content">
+    <div>
+       <section class="content">
     <div>
       <div id="container">
         <h1>&bull; Registrar Producto &bull;</h1>
         <div class="icon_wrapper">
           <!-- ESPACIO PARA IMAGEN -->
         </div>
-        <form action="#" method="post" id="product_form"  onsubmit="return enviar()">
+        <form action="#" method="post" id="contact_form" onsubmit="return enviarProducto()">
           <div class="name">
             <label for="name"></label>
-            <input type="text" placeholder="Identificador Unico" name="name" id="name_input" required>
+            <input type="text" placeholder="Identificador Unico" name="name" id="name_input" disabled>
           </div>
           <div class="subject">
             <label for="subject"></label>
-            <select placeholder="Descripción" name="name" id="name_input" required>
-              <option disabled hidden selected>Descripción</option>
-              <option>Botas Amarillas</option>
-              <option>Botas Verdes</option>
-              <option>Botas Rojas</option>
-              <option>Camiseta Negra</option>
-              <option>Camiseta Azul</option>
-              <option>Camiseta Blanca</option>
-            </select>
+            <input type="text" placeholder="Descripción" name="name" id="name_input" required>
           </div>
           <div class="name">
             <label for="name"></label>
-            <input type="text" placeholder="Valor Unitario" name="name" id="name_input" required>
+            <input type="number" placeholder="Valor Unitario" name="name" id="name_input" required>
           </div>
           <div class="subject">
             <label for="subject"></label>
@@ -273,17 +268,36 @@ return false;
       </div><!-- // End #containe  -->
     </div>
   </section>
+  <script>
+    function enviarProducto() {
+      event.preventDefault();
+
+      Swal.fire({
+        title: 'El producto ha sido registrado correctamente',
+        type: 'success',
+        showCancelButton: false,
+
+      }).then((result) => {
+        if (result.value) {
+          document.formulario_registro.submit();
+        }
+        return false;
+      })
+    }
+  </script>
+    </div>
+  </section>
 			</div>
 			<!-- SIGUIENTE -->
 			<div class="mdl-tabs__panel" id="tabListProducts">
-				<section>
-					<div class="table-title">
-						<h1>Productos registrados hasta el momento</h1>
-					</div>
-					<div class="contBuscar">
-					<h3>Buscar:</h3>
-					<input type="text">
-				</div>
+			 <section>
+    <div class="table-title">
+      <h1>Productos registrados hasta el momento</h1>
+    </div>
+    <div class="contBuscar">
+      <h3>Buscar:</h3>
+      <input type="text">
+    </div>
     <table class="table-fill">
       <thead>
         <tr>
@@ -309,7 +323,9 @@ return false;
               </div>
               <div class="botIcon">
                 <button>
-                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
+                  <a href="editarProducto.html">
+                    <img class="icono2" src="icon/edit.png" alt="Icono de Editar">
+                  </a>
                 </button>
               </div>
             </div>
@@ -339,7 +355,9 @@ return false;
               </div>
               <div class="botIcon">
                 <button>
-                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
+                  <a href="editarProducto.html">
+                    <img class="icono2" src="icon/edit.png" alt="Icono de Editar">
+                  </a>
                 </button>
               </div>
             </div>

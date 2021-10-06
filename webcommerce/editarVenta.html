@@ -7,8 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sales</title>
-
+	<title>Inventory</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/sweetalert2.css">
 	<link rel="stylesheet" href="css/material.min.css">
@@ -22,14 +21,10 @@
 	<script src="js/sweetalert2.min.js" ></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
 	<script src="js/main.js" ></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-
-sweetalert2/7.33.1/sweetalert2.all.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limo
-nte-sweetalert2/7.33.1/sweetalert2.css">
- <link rel="preconnect" href="https://fonts.googleapis.com">
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,100&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <script src="js/registroVentas.js"></script>
@@ -38,7 +33,6 @@ nte-sweetalert2/7.33.1/sweetalert2.css">
     integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.css">
-
 </head>
 <body>
 	<!-- Notifications area -->
@@ -216,11 +210,11 @@ nte-sweetalert2/7.33.1/sweetalert2.css">
 		<section class="content">
     <div>
       <div id="container">
-        <h1>&bull; Registrar Venta &bull;</h1>
+        <h1>&bull; Actualizar Venta &bull;</h1>
         <div class="icon_wrapper">
           <!-- ESPACIO PARA IMAGEN -->
         </div>
-        <form action="#" method="post" id="contact_form" onsubmit="return enviarVenta()">
+        <form action="#" method="post" id="contact_form" onsubmit="return editarVenta()">
           <div class="name">
             <label for="name"></label>
             <input type="text" placeholder="Nombre Vendedor" name="name" id="name_input" required>
@@ -266,17 +260,17 @@ nte-sweetalert2/7.33.1/sweetalert2.css">
                 </tr>
               </tbody>
             </table>
-          <input type="submit" value="Enviar" id="form_button" />
+            <input type="submit" value="Enviar" id="form_button" />
         </form><!-- // End form -->
       </div><!-- // End #containe  -->
     </div>
   </section>
   <script>
-    function enviarVenta() {
+    function editarVenta() {
       event.preventDefault();
 
       Swal.fire({
-        title: 'La venta ha sido registrada correctamente',
+        title: 'La venta ha sido actualizada correctamente',
         type: 'success',
         showCancelButton: false,
 
@@ -288,6 +282,5 @@ nte-sweetalert2/7.33.1/sweetalert2.css">
       })
     }
   </script>
-	</section>
 </body>
 </html>
