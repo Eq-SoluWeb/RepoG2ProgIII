@@ -14,14 +14,34 @@
 	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/verVentasProductos.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
 	<script src="js/material.min.js" ></script>
 	<script src="js/sweetalert2.min.js" ></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
 	<script src="js/main.js" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-
+	sweetalert2/7.33.1/sweetalert2.all.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limo
+	nte-sweetalert2/7.33.1/sweetalert2.css">
 </head>
 <body>
+		<script>
+	function enviar() {
+	event.preventDefault();
+	Swal.fire({
+	title: 'El usuario ha sio registrado correctamente',
+	type: 'success',
+	showCancelButton: false,
+	}).then((result) => {
+	if (result.value) {
+	document.formulario_registro.submit();
+	}
+	return false;
+	})
+	}
+	</script>
 	<!-- Notifications area -->
 		<!-- Notifications area -->
 	<section class="full-width container-notifications">
@@ -218,7 +238,7 @@
 								Nuevo Miembro
 							</div>
 							<div class="full-width panel-content">
-								<form>
+								<form form action="#" method="post" id="admin_form" onsubmit="return enviar()">
 									<div class="mdl-grid">
 										<div class="mdl-cell mdl-cell--12-col">
 									        <legend class="text-condensedLight"><i class="zmdi zmdi-border-color"></i> &nbsp; Datos de la Persona</legend><br>
@@ -332,7 +352,18 @@
 											<span>1. Nombre de Administrador</span>
 											<span class="mdl-list__item-sub-title">Correo</span>
 										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
+										<div class="contIcono">
+              <div class="botIcon">
+                <button>
+                  <img  class="icono1" src="icon/delete.png" alt="Icono de Borrar">
+                </button>
+              </div>
+              <div class="botIcon">
+                <button>
+                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
+                </button>
+              </div>
+            </div>
 									</div>
 									<li class="full-width divider-menu-h"></li>
 									<div class="mdl-list__item mdl-list__item--two-line">
@@ -341,7 +372,18 @@
 											<span>2. Nombre de Administrador</span>
 											<span class="mdl-list__item-sub-title">Correo</span>
 										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
+										<div class="contIcono">
+              <div class="botIcon">
+                <button>
+                  <img  class="icono1" src="icon/delete.png" alt="Icono de Borrar">
+                </button>
+              </div>
+              <div class="botIcon">
+                <button>
+                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
+                </button>
+              </div>
+            </div>
 									</div>
 									<li class="full-width divider-menu-h"></li>
 									<div class="mdl-list__item mdl-list__item--two-line">
@@ -350,7 +392,18 @@
 											<span>3. Nombre de Administrador</span>
 											<span class="mdl-list__item-sub-title">Correo</span>
 										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
+										<div class="contIcono">
+              <div class="botIcon">
+                <button>
+                  <img  class="icono1" src="icon/delete.png" alt="Icono de Borrar">
+                </button>
+              </div>
+              <div class="botIcon">
+                <button>
+                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
+                </button>
+              </div>
+            </div>
 									</div>
 									<li class="full-width divider-menu-h"></li>
 									<div class="mdl-list__item mdl-list__item--two-line">
@@ -359,7 +412,18 @@
 											<span>4. Nombre de Administrador</span>
 											<span class="mdl-list__item-sub-title">Correo</span>
 										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
+										<div class="contIcono">
+              <div class="botIcon">
+                <button>
+                  <img  class="icono1" src="icon/delete.png" alt="Icono de Borrar">
+                </button>
+              </div>
+              <div class="botIcon">
+                <button>
+                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
+                </button>
+              </div>
+            </div>
 									</div>
 									<li class="full-width divider-menu-h"></li>
 									<div class="mdl-list__item mdl-list__item--two-line">
@@ -368,7 +432,18 @@
 											<span>5. Nombre de Administrador</span>
 											<span class="mdl-list__item-sub-title">Correo</span>
 										</span>
-										<a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
+										<div class="contIcono">
+              <div class="botIcon">
+                <button>
+                  <img  class="icono1" src="icon/delete.png" alt="Icono de Borrar">
+                </button>
+              </div>
+              <div class="botIcon">
+                <button>
+                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
+                </button>
+              </div>
+            </div>
 									</div>
 								</div>
 							</div>

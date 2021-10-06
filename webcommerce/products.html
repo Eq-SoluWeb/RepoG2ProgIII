@@ -22,7 +22,26 @@
 	<script src="js/sweetalert2.min.js" ></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
 	<script src="js/main.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-
+sweetalert2/7.33.1/sweetalert2.all.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limo
+nte-sweetalert2/7.33.1/sweetalert2.css">
 </head>
+<script>
+function enviar() {
+event.preventDefault();
+Swal.fire({
+title: 'El Producto ha sido registrada correctamente',
+type: 'success',
+showCancelButton: false,
+}).then((result) => {
+if (result.value) {
+document.formulario_registro.submit();
+}
+return false;
+})
+}
+</script>
 <body>
 	<!-- Notifications area -->
 	<section class="full-width container-notifications">
@@ -219,7 +238,7 @@
         <div class="icon_wrapper">
           <!-- ESPACIO PARA IMAGEN -->
         </div>
-        <form action="#" method="post" id="contact_form">
+        <form action="#" method="post" id="product_form"  onsubmit="return enviar()">
           <div class="name">
             <label for="name"></label>
             <input type="text" placeholder="Identificador Unico" name="name" id="name_input" required>

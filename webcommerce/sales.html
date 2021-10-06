@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/sweetalert2.css">
 	<link rel="stylesheet" href="css/material.min.css">
+  <link rel="stylesheet" href="css/registarVenta.css">
 	<link rel="stylesheet" href="css/verVentasProductos.css">
 	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
@@ -21,7 +22,26 @@
 	<script src="js/sweetalert2.min.js" ></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
 	<script src="js/main.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-
+sweetalert2/7.33.1/sweetalert2.all.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limo
+nte-sweetalert2/7.33.1/sweetalert2.css">
 </head>
+<script>
+function enviar() {
+event.preventDefault();
+Swal.fire({
+title: 'La venta ha sido registrada correctamente',
+type: 'success',
+showCancelButton: false,
+}).then((result) => {
+if (result.value) {
+document.formulario_registro.submit();
+}
+return false;
+})
+}
+</script>
 <body>
 	<!-- Notifications area -->
 	<section class="full-width container-notifications">
@@ -195,81 +215,76 @@
 				</nav>
 			</div>
 		</div>
-		<section class="full-width header-well">
-			<div class="full-width header-well-icon">
-				<i class="zmdi zmdi-shopping-cart"></i>
-			</div>
-			<div class="full-width header-well-text">
-				<p>Titulo</p>
-			</div>
-		</section>
-		<div class="contBuscar">
-      <h3>Buscar:</h3>
-      <input type="text">
+		<section class="content">
+    <div>
+      <div id="container">
+        <h1>&bull; Registrar Venta &bull;</h1>
+        <div class="icon_wrapper">
+          <!-- ESPACIO PARA IMAGEN -->
+        </div>
+        <form action="#" method="post" id="sell_form" onsubmit="return enviar()">
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="Nombre Vendedor" name="name" id="name_input" required>
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="email" placeholder="Email Vendedor" name="email" id="email_input" required>
+          </div>
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="Nombre Cliente" name="name" id="name_input" required>
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="number" placeholder="Identificacion Cliente" name="email" id="email_input" required>
+          </div>
+          <div class="subject">
+            <label for="name"></label>
+            <input type="number" placeholder="Identificador Venta" name="name" id="name_input" required>
+          </div>
+          <div class="subject">
+            <label for="name"></label>
+            <input type="date" placeholder="Fecha" name="name" id="name_input" required>
+          </div>
+          <!-- <div class="telephone">
+            <label for="name"></label>
+            <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required>
+          </div> -->
+          <div class="subject">
+            <label for="subject"></label>
+            <select placeholder="Producto" name="subject" id="subject_input" required>
+              <option disabled hidden selected>Producto</option>
+              <option>Botas Amarillas</option>
+              <option>Botas Verdes</option>
+              <option>Botas Rojas</option>
+              <option>Camiseta Negra</option>
+              <option>Camiseta Azul</option>
+              <option>Camiseta Blanca</option>
+            </select>
+          </div>
+          <div class="name">
+            <label for="name"></label>
+            <input type="number" placeholder="Cantidad" name="name" id="name_input" required>
+          </div>
+          <div class="email">
+            <label for="name"></label>
+            <input type="number" placeholder="Valor unitario" name="name" id="name_input" required>
+          </div>
+          <div>
+            <p class="center">Valor total: $ ###</p>
+          </div>
+          <!-- <div class="message">
+                      <label for="message"></label>
+                      <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5"
+                        required></textarea>
+                    </div> -->
+          <br>
+          <input type="submit" value="Enviar" id="form_button" />
+        </form><!-- // End form -->
+      </div><!-- // End #containe  -->
     </div>
-		<div class="full-width divider-menu-h"></div>
-		<div class="mdl-grid">
-			<!-- aqui -->
-			<table class="table-fill">
-      <thead>
-        <tr>
-          <th class="text-left">Identificador Unico</th>
-          <th class="text-left">Valor Total</th>
-          <th class="text-left">Fecha de Venta</th>
-          <th class="text-left">Documento Identificacion</th>
-          <th class="text-left">Nombre Cliente</th>
-          <th class="text-left">Encargado</th>
-          <th class="text-left">Acciones</th>
-        </tr>
-      </thead>
-      <tbody class="table-hover">
-        <tr>
-          <td class="text-left">0001</td>
-          <td class="text-left">$ 200000</td>
-          <td class="text-left">30/09/2021</td>
-          <td class="text-left">14695176</td>
-          <td class="text-left">Horacio Daza</td>
-          <td class="text-left">David Rios</td>
-          <td class="text-center">
-            <div class="contIcono">
-              <div class="botIcon">
-                <button>
-                  <img  class="icono1" src="icon/delete.png" alt="Icono de Borrar">
-                </button>
-              </div>
-              <div class="botIcon">
-                <button>
-                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
-                </button>
-              </div>
-            </div>
-          </td>
-        </tr>
-				<tr>
-          <td class="text-left">0001</td>
-          <td class="text-left">$ 200000</td>
-          <td class="text-left">30/09/2021</td>
-          <td class="text-left">14695176</td>
-          <td class="text-left">Horacio Daza</td>
-          <td class="text-left">David Rios</td>
-          <td class="text-center">
-            <div class="contIcono">
-              <div class="botIcon">
-                <button>
-                  <img  class="icono1" src="icon/delete.png" alt="Icono de Borrar">
-                </button>
-              </div>
-              <div class="botIcon">
-                <button>
-                <img  class="icono2" src="icon/edit.png" alt="Icono de Borrar">
-                </button>
-              </div>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-		</div>
+  </section>
 	</section>
 </body>
 </html>
