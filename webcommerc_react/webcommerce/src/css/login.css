@@ -24,10 +24,14 @@ section {
 
 section .container
 {
+  /* position: center; */
   position: relative;
+  margin-left: 20%;
+  margin-top: 5%;
   width: 800px;
   height: 500px;
-  background: #fff;
+  /* background: #fff; */
+  background: #e4e6e7;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
@@ -65,7 +69,8 @@ section .container .user .formBx
   position: relative;
   width: 50%;
   height: 100%;
-  background: #fff;
+  /* background: #fff; */
+  background: #eaeff0;
   display: flex;
   justify-content: center;
   align-items: center;

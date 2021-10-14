@@ -7,7 +7,7 @@ import React from 'react';
 const Layout = ({ children }) => {
   return (
     <>
-      {/* <Notificaciones /> */}
+      <Notificaciones />
       <Nav />
       {/* <!-- pageContent --> */}
       <section class="full-width pageContent">
