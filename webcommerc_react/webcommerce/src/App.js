@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import Login from './pages/Login';
+import Login from './pages/Login';
 import Layout from './layout/Layout';
 import FormVentas from './pages/FormVentas';
 import GestionClientes from './pages/GestionClientes';
@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            {/* <Login /> */}
+            <Login />
           </Route>
           <Layout>
             <Route exact path="/FormVentas">

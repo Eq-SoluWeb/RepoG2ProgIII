@@ -10,7 +10,7 @@ import Imagenes from '../assets/Imagenes';
 function Login() {
   return (
     <>
-      <section>
+      <section className="sectionLogin" >
         <div className="container">
           <div className="user signinBx">
             <div className="imgBx">
