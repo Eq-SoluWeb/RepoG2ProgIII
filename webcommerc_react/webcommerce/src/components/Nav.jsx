@@ -8,7 +8,7 @@ import '../css/Custom.css';
 import '../css/main.css';
 
 
-
+import { Link } from 'react-router-dom';
 import {Boton} from './ButtonLogout'
 import '../css/Logout.css'
 
@@ -46,57 +46,57 @@ function Nav() {
           <nav class="full-width">
             <ul class="full-width list-unstyle menu-principal">
               <li class="full-width">
-                <a href="home.html" class="full-width">
+                <Link to="/Inicio" class="full-width">
                   <div class="navLateral-body-cl">
                     <i class="zmdi zmdi-view-dashboard"></i>
                   </div>
                   <div class="navLateral-body-cr">INICIO</div>
-                </a>
+                </Link>
               </li>
               <li class="full-width">
-                <a href="home.html" class="full-width">
+                <Link to="/GestionVendedor" class="full-width">
                   <div class="navLateral-body-cl">
                     <i class="zmdi zmdi-face"></i>
                   </div>
                   <div class="navLateral-body-cr">VENDEDORES</div>
-                </a>
-              </li>
+                </Link>
+           </li>
               <li class="full-width">
-                <a href="home.html" class="full-width">
+                <Link to="/GestionClientes" class="full-width">
                   <div class="navLateral-body-cl">
                     <i class="zmdi zmdi-face"></i>
                   </div>
                   <div class="navLateral-body-cr">CLIENTES</div>
-                </a>
-              </li>
+                </Link>
+           </li>
               <li class="full-width divider-menu-h"></li>
               <li class="full-width">
-                <a href="products.html" class="full-width">
+                <Link to="/Productos" class="full-width">
                   <div class="navLateral-body-cl">
                     <i class="zmdi zmdi-washing-machine"></i>
                   </div>
                   <div class="navLateral-body-cr">PRODUCTOS</div>
-                </a>
-              </li>
+                </Link>
+           </li>
               <li class="full-width divider-menu-h"></li>
               <li class="full-width">
-                <a href="sales.html" class="full-width">
+                <Link to="/FormVentas" class="full-width">
                   <div class="navLateral-body-cl">
                     <i class="zmdi zmdi-shopping-cart"></i>
                   </div>
                   <div class="navLateral-body-cr">VENTAS</div>
-                </a>
-              </li>
+                </Link>
+           </li>
               <li class="full-width divider-menu-h"></li>
               <li class="full-width divider-menu-h"></li>
               <li class="full-width">
-                <a href="seeSales.html" class="full-width">
+                <Link to="/VerVentas" class="full-width">
                   <div class="navLateral-body-cl">
                     <i class="zmdi zmdi-store"></i>
                   </div>
                   <div class="navLateral-body-cr">VER VENTAS</div>
-                </a>
-              </li>
+                </Link>
+           </li>
             </ul>
           </nav>
           <div className="Logout">
