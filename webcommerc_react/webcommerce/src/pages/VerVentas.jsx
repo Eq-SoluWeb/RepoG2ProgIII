@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/verVentasProductos2.css'
 // ...
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
@@ -13,16 +14,14 @@ import {
 } from 'reactstrap';
 
 const data = [
-  { id: 1, personaje: 'Naruto', anime: 'Naruto' },
-  { id: 2, personaje: 'Goku', anime: 'Dragon Ball' },
-  { id: 3, personaje: 'Kenshin Himura', anime: 'Rurouni Kenshin' },
-  { id: 4, personaje: 'Monkey D. Luffy', anime: 'One Piece' },
-  {
-    id: 5,
-    personaje: 'Edward Elric',
-    anime: 'Fullmetal Alchemist: Brotherhood',
+  { id: 1,
+    precio: '$1000',
+    fecha: '08/10/2021',
+    productos:"10",
+    cliente: "Carlos",
+    idCliente: "001",
+    encargado:"Raul",
   },
-  { id: 6, personaje: 'Seto Kaiba', anime: 'Yu-Gi-Oh!' },
 ];
 
 class FormVentas extends React.Component {
@@ -32,8 +31,12 @@ class FormVentas extends React.Component {
     modalInsertar: false,
     form: {
       id: '',
-      personaje: '',
-      anime: '',
+      precio: '',
+      fecha: '',
+      productos: '',
+      cliente: '',
+      idCliente: '',
+      encargado: '',
     },
   };
 
@@ -63,8 +66,12 @@ class FormVentas extends React.Component {
     var arreglo = this.state.data;
     arreglo.map((registro) => {
       if (dato.id == registro.id) {
-        arreglo[contador].personaje = dato.personaje;
-        arreglo[contador].anime = dato.anime;
+        arreglo[contador].precio = dato.precio;
+        arreglo[contador].fecha = dato.fecha;
+        arreglo[contador].productos = dato.productos;
+        arreglo[contador].cliente = dato.cliente;
+        arreglo[contador].idCliente = dato.idCliente;
+        arreglo[contador].encargado = dato.encargado;
       }
       contador++;
     });
@@ -108,45 +115,60 @@ class FormVentas extends React.Component {
   render() {
     return (
       <>
-        <Container>
+        <Container className="body">
           <br />
-          <h1>Formulario de Ventas</h1>
+          <div>
+            <h1 className="table-title">Formulario de Ventas</h1>
+          </div>
           <Button color="success" onClick={() => this.mostrarModalInsertar()}>
             Crear
           </Button>
           <br />
           <br />
-          <Table>
+          <table class="table-fill">
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Personaje</th>
-                <th>Anime</th>
-                <th>Acción</th>
+                <th class="text-left">ID</th>
+                <th class="text-left">Precio</th>
+                <th class="text-left">Fecha</th>
+                <th class="text-left">Productos</th>
+                <th class="text-left">Cliente</th>
+                <th class="text-left">ID Cliente</th>
+                <th class="text-left">Encargado</th>
+                <th class="text-left">Acción</th>
               </tr>
             </thead>
 
-            <tbody>
+            <tbody class="table-hover">
               {this.state.data.map((dato) => (
                 <tr key={dato.id}>
-                  <td>{dato.id}</td>
-                  <td>{dato.personaje}</td>
-                  <td>{dato.anime}</td>
+                  <td class="text-left">{dato.id}</td>
+                  <td class="text-left">{dato.precio}</td>
+                  <td class="text-left">{dato.fecha}</td>
+                  <td class="text-left">{dato.productos}</td>
+                  <td class="text-left">{dato.cliente}</td>
+                  <td class="text-left">{dato.idCliente}</td>
+                  <td class="text-left">{dato.encargado}</td>
                   <td>
                     <Button
                       color="primary"
                       onClick={() => this.mostrarModalActualizar(dato)}
+                      className="Button-Form"
                     >
                       Editar
                     </Button>{' '}
-                    <Button color="danger" onClick={() => this.eliminar(dato)}>
+                    <Button
+                      color="danger"
+                      onClick={() => this.eliminar(dato)}
+                      className="Button-Form"
+                    >
                       Eliminar
                     </Button>
                   </td>
                 </tr>
               ))}
             </tbody>
-          </Table>
+          </table>
         </Container>
 
         <Modal isOpen={this.state.modalActualizar}>
@@ -169,24 +191,68 @@ class FormVentas extends React.Component {
             </FormGroup>
 
             <FormGroup>
-              <label>Personaje:</label>
+              <label>Precio:</label>
               <input
                 className="form-control"
-                name="personaje"
-                type="text"
+                name="precio"
+                type="number"
                 onChange={this.handleChange}
-                value={this.state.form.personaje}
+                value={this.state.form.precio}
               />
             </FormGroup>
 
             <FormGroup>
-              <label>Anime:</label>
+              <label>Fecha</label>
               <input
                 className="form-control"
-                name="anime"
+                name="fecha"
+                type="date"
+                onChange={this.handleChange}
+                value={this.state.form.fecha}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>Productos</label>
+              <input
+                className="form-control"
+                name="productos"
                 type="text"
                 onChange={this.handleChange}
-                value={this.state.form.anime}
+                value={this.state.form.productos}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>Cliente</label>
+              <input
+                className="form-control"
+                name="cliente"
+                type="text"
+                onChange={this.handleChange}
+                value={this.state.form.cliente}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>ID Cliente</label>
+              <input
+                className="form-control"
+                name="idCliente"
+                type="text"
+                onChange={this.handleChange}
+                value={this.state.form.idCliente}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>Encargado</label>
+              <input
+                className="form-control"
+                name="encargado"
+                type="text"
+                onChange={this.handleChange}
+                value={this.state.form.encargado}
               />
             </FormGroup>
           </ModalBody>
@@ -207,7 +273,7 @@ class FormVentas extends React.Component {
         <Modal isOpen={this.state.modalInsertar}>
           <ModalHeader>
             <div>
-              <h3>Insertar Personaje</h3>
+              <h3>Insertar Venta</h3>
             </div>
           </ModalHeader>
 
@@ -224,20 +290,60 @@ class FormVentas extends React.Component {
             </FormGroup>
 
             <FormGroup>
-              <label>Personaje:</label>
+              <label>Precio:</label>
               <input
                 className="form-control"
-                name="personaje"
+                name="precio"
                 type="text"
                 onChange={this.handleChange}
               />
             </FormGroup>
 
             <FormGroup>
-              <label>Anime:</label>
+              <label>Fecha:</label>
               <input
                 className="form-control"
-                name="anime"
+                name="fecha"
+                type="date"
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>Productos:</label>
+              <input
+                className="form-control"
+                name="productos"
+                type="numbers"
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>Cliente:</label>
+              <input
+                className="form-control"
+                name="cliente"
+                type="text"
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>ID Cliente:</label>
+              <input
+                className="form-control"
+                name="idCliente"
+                type="text"
+                onChange={this.handleChange}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <label>Encargado:</label>
+              <input
+                className="form-control"
+                name="encargado"
                 type="text"
                 onChange={this.handleChange}
               />
