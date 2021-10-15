@@ -1,14 +1,18 @@
-import React from 'react'
-import  '../css/normalize.css'
-import  '../css/sweetalert2.css'
-import  '../css/MaterialDesing.css'
-import  '../css/materialmin.css'
-import  '../css/Custom.css'
-import  '../css/Custom.css'
-import  '../css/main.css'
+import React from 'react';
+import '../css/normalize.css';
+import '../css/sweetalert2.css';
+import '../css/MaterialDesing.css';
+import '../css/materialmin.css';
+import '../css/Custom.css';
+import '../css/Custom.css';
+import '../css/main.css';
 
-import Imagenes from '../assets/Imagenes'
 
+
+import {Boton} from './ButtonLogout'
+import '../css/Logout.css'
+
+import Imagenes from '../assets/Imagenes';
 
 // import 'ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'
 // import '../js/jquery1'
@@ -29,13 +33,9 @@ function Nav() {
           </div>
           <figure class="full-width navLateral-body-tittle-menu">
             <div>
-              <img
-                src={Imagenes[3].img}
-                alt="Avatar"
-                class="img-responsive"
-              />
+              <img src={Imagenes[3].img} alt="Avatar" class="img-responsive" />
             </div>
-            <figcaption>
+            <figcaption style={{ margin: '20px' }}>
               <span>
                 Nombre completo del Aministrador
                 <br />
@@ -53,33 +53,21 @@ function Nav() {
                   <div class="navLateral-body-cr">INICIO</div>
                 </a>
               </li>
-              <li class="full-width divider-menu-h"></li>
               <li class="full-width">
-                <a href="#!" class="full-width btn-subMenu">
+                <a href="home.html" class="full-width">
                   <div class="navLateral-body-cl">
                     <i class="zmdi zmdi-face"></i>
                   </div>
-                  <div class="navLateral-body-cr">USUARIOS</div>
-                  <span class="zmdi zmdi-chevron-left"></span>
+                  <div class="navLateral-body-cr">VENDEDORES</div>
                 </a>
-                <ul class="full-width menu-principal sub-menu-options">
-                  <li class="full-width">
-                    <a href="admin.html" class="full-width">
-                      <div class="navLateral-body-cl">
-                        <i class="zmdi zmdi-account"></i>
-                      </div>
-                      <div class="navLateral-body-cr">VENDEDORES Y ADMINS</div>
-                    </a>
-                  </li>
-                  <li class="full-width">
-                    <a href="client.html" class="full-width">
-                      <div class="navLateral-body-cl">
-                        <i class="zmdi zmdi-accounts"></i>
-                      </div>
-                      <div class="navLateral-body-cr">CLIENTES</div>
-                    </a>
-                  </li>
-                </ul>
+              </li>
+              <li class="full-width">
+                <a href="home.html" class="full-width">
+                  <div class="navLateral-body-cl">
+                    <i class="zmdi zmdi-face"></i>
+                  </div>
+                  <div class="navLateral-body-cr">CLIENTES</div>
+                </a>
               </li>
               <li class="full-width divider-menu-h"></li>
               <li class="full-width">
@@ -111,10 +99,13 @@ function Nav() {
               </li>
             </ul>
           </nav>
+          <div className="Logout">
+            <input type="checkbox"/>
+          </div>
         </div>
       </section>
     </>
   );
 }
 
-export default Nav
+export default Nav;
