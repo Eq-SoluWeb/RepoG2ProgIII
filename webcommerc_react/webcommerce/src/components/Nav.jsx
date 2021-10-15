@@ -7,10 +7,8 @@ import '../css/Custom.css';
 import '../css/Custom.css';
 import '../css/main.css';
 
-
 import { Link } from 'react-router-dom';
-import {Boton} from './ButtonLogout'
-import '../css/Logout.css'
+import '../css/Logout.css';
 
 import Imagenes from '../assets/Imagenes';
 
@@ -60,7 +58,7 @@ function Nav() {
                   </div>
                   <div class="navLateral-body-cr">VENDEDORES</div>
                 </Link>
-           </li>
+              </li>
               <li class="full-width">
                 <Link to="/GestionClientes" class="full-width">
                   <div class="navLateral-body-cl">
@@ -68,7 +66,7 @@ function Nav() {
                   </div>
                   <div class="navLateral-body-cr">CLIENTES</div>
                 </Link>
-           </li>
+              </li>
               <li class="full-width divider-menu-h"></li>
               <li class="full-width">
                 <Link to="/Productos" class="full-width">
@@ -77,7 +75,7 @@ function Nav() {
                   </div>
                   <div class="navLateral-body-cr">PRODUCTOS</div>
                 </Link>
-           </li>
+              </li>
               <li class="full-width divider-menu-h"></li>
               <li class="full-width">
                 <Link to="/FormVentas" class="full-width">
@@ -86,7 +84,7 @@ function Nav() {
                   </div>
                   <div class="navLateral-body-cr">VENTAS</div>
                 </Link>
-           </li>
+              </li>
               <li class="full-width divider-menu-h"></li>
               <li class="full-width divider-menu-h"></li>
               <li class="full-width">
@@ -96,11 +94,11 @@ function Nav() {
                   </div>
                   <div class="navLateral-body-cr">VER VENTAS</div>
                 </Link>
-           </li>
+              </li>
             </ul>
           </nav>
           <div className="Logout">
-            <input type="checkbox"/>
+            <input type="checkbox" />
           </div>
         </div>
       </section>
