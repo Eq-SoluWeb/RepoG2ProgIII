@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
+// 
 import PrivateLayout from './layouts/PrivateLayout';
 import Inicio from './pages/admin/Index';
 import Productos from './pages/admin/Productos';

@@ -12,15 +12,15 @@ import {
   ModalFooter,
 } from 'reactstrap';
 
-
 const data = [
-  { id: 1,
+  {
+    id: 1,
     precio: '$1000',
     fecha: '08/10/2021',
-    productos:"10",
-    cliente: "Carlos",
-    idCliente: "001",
-    encargado:"Raul",
+    productos: '10',
+    cliente: 'Carlos',
+    idCliente: '001',
+    encargado: 'Raul',
   },
 ];
 

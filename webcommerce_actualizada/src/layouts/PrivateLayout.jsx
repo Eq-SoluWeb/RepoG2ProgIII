@@ -9,17 +9,12 @@ import '../styles/PrivateCss/SidebarSimple.css';
 
 function PrivateLayout({children}) {
     return (
-      // <div>
-      //   <div>
+      // <div className="layoutPrivate">
+      //   <div className="reactanguloSide">
       //     <Sidebar />
       //   </div>
-      //   <div>
-      //     <section
-      //       className="text-center content"
-      //       style={{ padding: '0', maring: '20px' }}
-      //     >
+      //   <div className="contenido">
       //       {children}
-      //     </section>
       //   </div>
       // </div>
       <div className="layoutPrivate">

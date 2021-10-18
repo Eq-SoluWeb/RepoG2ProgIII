@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import {Prueba} from './Prueba'
+import { FormularioMelo } from './Prueba';
+import FormUsuarios from '../../components/FormUsuarios'
 
 function Usuarios() {
-  return (
-    <div>
-      <h1>Usuarios</h1>
-    </div>
+  return(
+    // <Prueba/>
+    // <FormularioMelo/>
+    <FormUsuarios/>
   )
 }
 
