@@ -1,5 +1,4 @@
 import Nav from '../components/Nav';
-import Imagenes from '../assets/Imagenes';
 
 import React from 'react';
 

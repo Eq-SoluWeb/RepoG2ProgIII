@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import LoginRender from '../components/LoginRender'
 // import {LoginButton} from '../components/Login';
-import '../css//login.css'
+import '../css/login.css'
 import Imagenes from '../assets/Imagenes';
 // import 'css/font-awesome-4.7.0/css/font-awesome.min.css';
 // import 'https://fonts.googleapis.com/icon?family=Material+Icons';
