@@ -1,0 +1,22 @@
+.layoutPrivate{
+  display: flex;
+  margin:0px;
+}
+
+
+.rectanguloSide{
+  height: 100vh;
+  width: 25%;
+  background-color: rgb(114, 114, 114);
+  position:fixed;
+}
+
+.contenido{
+  min-height: 100vh;
+  width: 75%;
+  margin-left: 25%;
+  padding: 8px;
+  overflow-y: auto;
+}
+
+
