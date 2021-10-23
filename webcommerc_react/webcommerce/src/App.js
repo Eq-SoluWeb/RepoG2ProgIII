@@ -8,10 +8,12 @@ import Home from './pages/Home'
 import Productos from './pages/Productos';
 import VerVentas from './pages/VerVentas';
 import Layout from './layout/Layout';
+import Nav from './components/Nav';
 
 function App() {
   return (
     <div>
+      <nav/>
       <Router>
         <Layout>
           <Switch  witch>
