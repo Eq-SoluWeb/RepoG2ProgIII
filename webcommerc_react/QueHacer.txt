@@ -1,1 +1,0 @@
-Estando en la carpeta webcommerce escribes npm install
