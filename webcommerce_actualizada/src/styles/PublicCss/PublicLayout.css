@@ -1,0 +1,15 @@
+.contPublica{
+  display: flex;
+  height:100vh;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: aqua;
+}
+
+.mainPublic{
+  height:100%;
+}
+
+.footerPublic{
+  background-color: blueviolet;
+}

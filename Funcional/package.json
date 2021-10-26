@@ -1,0 +1,47 @@
+{
+    "name": "facturaweb",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js",
+        "webpack": "webpack --mode development --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@ant-design/icons": "^4.7.0",
+        "bcrypt-nodejs": "^0.0.3",
+        "body-parser": "^1.19.0",
+        "body-parser-zlib": "^1.0.2",
+        "browserify": "^17.0.0",
+        "browserify-zlib": "^0.2.0",
+        "connect-multiparty": "^2.2.0",
+        "core-js": "^3.18.3",
+        "express": "^4.17.1",
+        "jsx": "^0.9.89",
+        "jwt-simple": "^0.5.6",
+        "mongoose": "^6.0.10",
+        "morgan": "^1.10.0",
+        "path": "^0.12.7",
+        "reactjs": "^1.0.0",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.15.8",
+        "@babel/preset-env": "^7.15.8",
+        "@babel/preset-react": "^7.14.5",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.2.2",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "nodemon": "^2.0.13",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "webpack": "^5.58.2",
+        "webpack-cli": "^4.9.0",
+        "webpack-dev-server": "^4.3.1"
+    }
+}
