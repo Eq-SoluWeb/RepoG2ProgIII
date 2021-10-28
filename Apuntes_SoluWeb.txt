@@ -1,3 +1,0 @@
-Apunte 1. 29/09/2021
-Comando para desligar una carpeta local de git >>> rm -rf .git
-Este comando se debe ejecutar por fuera y dentro de la rama principal.
