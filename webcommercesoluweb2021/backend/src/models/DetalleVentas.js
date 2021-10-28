@@ -11,4 +11,4 @@ const DetalleVentasSchema = new Schema({
     
 });
 
-module.exports = mongoose.model('DetalleVentas', VentasSchema);
+module.exports = mongoose.model('DetalleVentas', DetalleVentasSchema);

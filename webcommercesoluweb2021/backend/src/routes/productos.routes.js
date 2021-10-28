@@ -34,6 +34,6 @@ router.put('/:id', async(req, res) => {
 router.delete('/:id', async(req, res) => {
     await Producto.findByIdAndRemove(req.params.id);
     res.json({ status: 'Producto Eliminado' });
-})
+});
 
 module.exports = router;
