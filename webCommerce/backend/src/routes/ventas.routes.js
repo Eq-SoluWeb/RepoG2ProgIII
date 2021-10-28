@@ -13,14 +13,14 @@ router.get('/', async(req, res) => {
      res.json(ventas);
 });
 router.get('/:id', async(req, res) => {
-    const venta = await venta.findById(req.params.id);
-    res.json(venta);
+    const ventas = await ventas.findById(req.params.id);
+    res.json(ventas);
 });
 router.post('/', async(req, res) => {
     console.log(req.body);
-    const { factura, fecha, cliente, nombre_cliente,direccion_cliente,valor_venta } = req.body;
-    const venta = new venta({factura, fecha, cliente, nombre_cliente,direccion_cliente,valor_venta });
-    await venta.save();
+    const { factura, fecha, cliente, nombre_cliente,direccion_cliente,valor_venta,codigo_vendedor } = req.body;
+    const ventas = new venta({factura, fecha, cliente, nombre_cliente,direccion_cliente,valor_venta,codigo_vendedor });
+    await ventas.save();
     
 });
 

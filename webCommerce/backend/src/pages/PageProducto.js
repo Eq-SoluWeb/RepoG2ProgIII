@@ -153,7 +153,7 @@ addProducto(e){
                         </div>
                    </div>
                
-                   <div className="col s7">
+                   <div className="col-7">
                    <table className="table">
                        <thead>
                            <tr>
